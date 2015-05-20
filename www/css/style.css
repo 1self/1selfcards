@@ -1,0 +1,41 @@
+.card-action-buttons {
+	margin-top: 0px;
+}
+
+.card-container{
+	/*border-style: solid;
+	border-color: pink;
+	border-width: 1px;*/
+	height: 300px;
+	margin-top: 5px;
+}
+
+.card-header {
+	height: 50px;
+	background-color: #a9b2bd;
+	padding: 5px;
+}
+
+.card-text-container{
+	height: 250px;
+	background-color: #ffffff;
+}
+
+.card-text {
+	font-size: 50px;
+	line-height: 50px;
+	background-color: #ffffff;
+	max-height: 100%;
+}
+
+.usericon {
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+
+.divUsername {
+	float: left;
+	margin-left: 10px;
+}
+

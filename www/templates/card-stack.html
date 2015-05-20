@@ -1,0 +1,44 @@
+<ion-view view-title="Card Stack">
+  <ion-content>
+    <td-cards>
+      <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}" ng-style="{{card.cardStyle}}">
+        <div>
+          <div class="no-text">NOPE</div>
+
+
+          <div class="card-container">
+            <div class="card-header">
+              <div class="divUsericon">
+                <img ng-src="{{card.usericon}}" class="usericon">
+              </div>
+              <div class="divUsername">
+                {{card.username}}
+              </div>
+            </div>
+            <div class="card-text-container">
+              <div class="card-text">
+                {{card.cardText}}
+              </div>
+              <div ng-if="card.cardId === -1">
+                <input type="button" value="Get more cards" ng-click="getMoreCards();">
+              </div>
+            </div>
+          </div>
+          <div class="yes-text">LIKE</div>
+        </div>
+        <ion-list>
+          <ion-item href="#/app/cards/{{card.cardId}}">
+            Explore the data &gt;
+          </ion-item>
+          <ion-item ng-click="shareAnywhere()">
+            Share
+          </ion-item>
+        </ion-list>
+      </td-card>
+    </td-cards>
+    <!-- <div class="button-bar">
+      <a href="#card-stack" class="button button-stable button-block">&lt; Previous card</a>
+      <a href="#card-stack" class="button button-stable button-block">Next card &gt;</a>
+    </div> -->
+  </ion-content>
+</ion-view>
